@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 5 - How to automate TikTok</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <h1>Step 5: How to automate TikTok</h1>
+    </header>
+
+
+    <main>
+        <section class="info">
+            <p>Now we're going to learn how to upload all the videos we've made at different times of the day.</p>
+        </section>
+
+<section class="video-container">
+            <video controls>
+                <source src="automatevideos.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+<main>
+        <section class="info">
+            <p>Now that you know this, you can start making money by automating TikTok.</p>
+            <p>I recommend checking out all the videos and explanations and staying up to date with new updates.</p>
+            <p>Don't hesitate to contact me if there are any problems, and don't forget to follow me on TikTok and like all the videos to thank me for the explanation (@slowxz_songs).</p>
+        </section>
+
+<div class="navigation-buttons">
+            <button class="nav-btn" onclick="location.href='5.html'">Back</button>
+        </div>
+    </main>
+
+ <footer>
+        <button class="footer-btn" onclick="openModal('privacy')">Privacy Policy</button>
+        <button class="footer-btn" onclick="openModal('terms')">Terms of Use</button>
+        <button class="footer-btn" onclick="openModal('contact')">Contact</button>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-text"></div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(type) {
+            let content = '';
+
+            if (type === 'privacy') {
+                content = `<h2>Privacy Policy</h2>
+                <p>We are committed to protecting your privacy. Your personal data will not be shared with third parties.</p>
+                <p>We only collect necessary information to improve our service.</p>`;
+            } 
+            else if (type === 'terms') {
+                content = `<h2>Terms of Use</h2>
+                <p>By using this website, you agree to follow our guidelines and not misuse the provided content.</p>
+                <p>Any unauthorized reproduction of the material is strictly prohibited.</p>`;
+            } 
+            else if (type === 'contact') {
+                content = `<h2>Contact</h2>
+                <p>If you have any questions, feel free to reach us at:</p>
+                <p><strong>moinnlyrics@gmail.com</strong></p>`;
+            }
+
+            document.getElementById('modal-text').innerHTML = content;
+            document.getElementById('modal').style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = "none";
+        }
+    </script>
+
+</body>
+</html>

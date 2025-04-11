@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My TikTok Automation Method</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <h1>The method that makes me earn more than €300/day with TikTok automation</h1>
+    </header>
+
+    <main>
+        <section class="intro">
+            <p>How I managed to generate over €5000 in a month without having to do anything.</p>
+            <div class="arrows">
+                <span>⬇</span><span>⬇</span><span>⬇</span>
+            </div>
+        </section>
+
+        <section class="story">
+            <p>Since 2020, I've been posting videos like the ones you've seen on my profile.</p>
+            <p>During the COVID-19 pandemic, I had a lot of free time and manually created and uploaded all the videos.</p>
+            <p>But after a few months, I started working and had no time to post them.</p>  
+            <p>So, I looked for a way to save time—and I found it.</p>
+            <p>If you want to learn it and become a master at making money with this method <strong>completely free</strong>, keep scrolling down.</p>
+        </section>
+
+        <section class="image-container">
+            <img src="dinerotiktok.jpg" alt="TikTok earnings" class="imagen-dinero">
+        </section>
+
+        <section class="next-step">
+            <h2>Step 1: Create Your Account</h2>
+            <p>To start making money, you first need to create an account in one of the countries where TikTok monetization is available.</p>
+            <p>On the next page, I’ll show you exactly how to do it in just a few minutes. Ready? Let’s go!</p>
+            <div class="arrows">
+                <span>⬇</span><span>⬇</span><span>⬇</span>
+            </div>
+            <button class="next-btn" onclick="location.href='2.html'">Next</button>
+        </section>
+
+    </main>
+
+    <!-- Footer con botones pequeños -->
+<footer>
+    <button class="footer-btn" onclick="openModal('privacy')">Privacy Policy</button>
+    <button class="footer-btn" onclick="openModal('terms')">Terms of Use</button>
+    <button class="footer-btn" onclick="openModal('contact')">Contact</button>
+</footer>
+
+<!-- Modal general -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modal-text"></div>
+    </div>
+</div>
+
+<script>
+    function openModal(type) {
+        let content = '';
+
+        if (type === 'privacy') {
+            content = `<h2>Privacy Policy</h2>
+            <p>We respect your privacy and are committed to protecting your personal data.</p>
+            <p>Your information is collected only for service improvement and will never be shared with third parties.</p>`;
+        } 
+        else if (type === 'terms') {
+            content = `<h2>Terms of Use</h2>
+            <p>By using this website, you agree to follow our guidelines and not misuse any provided content.</p>
+            <p>Unauthorized reproduction, distribution, or modification of content is strictly prohibited.</p>`;
+        } 
+        else if (type === 'contact') {
+            content = `<h2>Contact</h2>
+            <p>For any inquiries, feel free to reach out at:</p>
+            <p><strong>moinnlyrics@gmail.com</strong></p>`;
+        }
+
+        document.getElementById('modal-text').innerHTML = content;
+        document.getElementById('modal').style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById('modal').style.display = "none";
+    }
+</script>
+
+
+</body>
+</html>

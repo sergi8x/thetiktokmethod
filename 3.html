@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 2 - HOW TO BE A NORMAL USER</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <h1>Step 2: HOW TO BE A NORMAL USER</h1>
+    </header>
+
+<section class="normal-user-info">
+    <p>If you start uploading videos immediately after creating your account, TikTok may shadowban you because it will think you are a bot.</p>
+    <p>To prevent this, I recommend using your account without posting any videos for at least <strong>two days</strong>. This will help make your account look more natural.</p>
+    <p>The best approach is to set a <strong>normal profile picture</strong> and follow accounts that post content similar to what we will be creating.</p>
+</section>
+
+<section class="next-step">
+    <h2>Step 3: How to download background videos for free and fast?</h2>
+</section>
+
+<div class="navigation-buttons">
+    <a href="2.html" class="nav-btn">Back</a>
+    <a href="4.html" class="nav-btn">Next</a>
+</div>
+
+<footer>
+    <button class="footer-btn" onclick="openModal('privacy')">Privacy Policy</button>
+    <button class="footer-btn" onclick="openModal('terms')">Terms of Use</button>
+    <button class="footer-btn" onclick="openModal('contact')">Contact</button>
+</footer>
+
+<!-- Modal general -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modal-text"></div>
+    </div>
+</div>
+
+<script>
+    function openModal(type) {
+        let content = '';
+
+        if (type === 'privacy') {
+            content = `<h2>Privacy Policy</h2>
+            <p>We respect your privacy and are committed to protecting your personal data.</p>
+            <p>Your information is collected only for service improvement and will never be shared with third parties.</p>`;
+        } 
+        else if (type === 'terms') {
+            content = `<h2>Terms of Use</h2>
+            <p>By using this website, you agree to follow our guidelines and not misuse any provided content.</p>
+            <p>Unauthorized reproduction, distribution, or modification of content is strictly prohibited.</p>`;
+        } 
+        else if (type === 'contact') {
+            content = `<h2>Contact</h2>
+            <p>For any inquiries, feel free to reach out at:</p>
+            <p><strong>moinnlyrics@gmail.com</strong></p>`;
+        }
+
+        document.getElementById('modal-text').innerHTML = content;
+        document.getElementById('modal').style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById('modal').style.display = "none";
+    }
+</script>
+
