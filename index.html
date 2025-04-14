@@ -6,6 +6,10 @@
     <title>My TikTok Automation Method</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- AdSense verification -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7999602835086799"
+     crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -13,7 +17,7 @@
         <h1>The method that makes me earn more than €300/day with TikTok automation</h1>
     </header>
 
-        <main>
+    <main>
         <section class="info">
             <p>How I managed to generate over €5000 in a month:</p>
 
@@ -34,53 +38,51 @@
             <p>On the next page, I’ll show you exactly how to do it in just a few minutes. Ready? Let’s go!</p>
             <button class="next-btn" onclick="location.href='2.html'">Next</button>
         </section>
-
     </main>
 
     <!-- Footer con botones pequeños -->
-<footer>
-    <button class="footer-btn" onclick="openModal('privacy')">Privacy Policy</button>
-    <button class="footer-btn" onclick="openModal('terms')">Terms of Use</button>
-    <button class="footer-btn" onclick="openModal('contact')">Contact</button>
-</footer>
+    <footer>
+        <button class="footer-btn" onclick="openModal('privacy')">Privacy Policy</button>
+        <button class="footer-btn" onclick="openModal('terms')">Terms of Use</button>
+        <button class="footer-btn" onclick="openModal('contact')">Contact</button>
+    </footer>
 
-<!-- Modal general -->
-<div id="modal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <div id="modal-text"></div>
+    <!-- Modal general -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-text"></div>
+        </div>
     </div>
-</div>
 
-<script>
-    function openModal(type) {
-        let content = '';
+    <script>
+        function openModal(type) {
+            let content = '';
 
-        if (type === 'privacy') {
-            content = `<h2>Privacy Policy</h2>
-            <p>We respect your privacy and are committed to protecting your personal data.</p>
-            <p>Your information is collected only for service improvement and will never be shared with third parties.</p>`;
-        } 
-        else if (type === 'terms') {
-            content = `<h2>Terms of Use</h2>
-            <p>By using this website, you agree to follow our guidelines and not misuse any provided content.</p>
-            <p>Unauthorized reproduction, distribution, or modification of content is strictly prohibited.</p>`;
-        } 
-        else if (type === 'contact') {
-            content = `<h2>Contact</h2>
-            <p>For any inquiries, feel free to reach out at:</p>
-            <p><strong>moinnlyrics@gmail.com</strong></p>`;
+            if (type === 'privacy') {
+                content = `<h2>Privacy Policy</h2>
+                <p>We respect your privacy and are committed to protecting your personal data.</p>
+                <p>Your information is collected only for service improvement and will never be shared with third parties.</p>`;
+            } 
+            else if (type === 'terms') {
+                content = `<h2>Terms of Use</h2>
+                <p>By using this website, you agree to follow our guidelines and not misuse any provided content.</p>
+                <p>Unauthorized reproduction, distribution, or modification of content is strictly prohibited.</p>`;
+            } 
+            else if (type === 'contact') {
+                content = `<h2>Contact</h2>
+                <p>For any inquiries, feel free to reach out at:</p>
+                <p><strong>moinnlyrics@gmail.com</strong></p>`;
+            }
+
+            document.getElementById('modal-text').innerHTML = content;
+            document.getElementById('modal').style.display = "block";
         }
 
-        document.getElementById('modal-text').innerHTML = content;
-        document.getElementById('modal').style.display = "block";
-    }
-
-    function closeModal() {
-        document.getElementById('modal').style.display = "none";
-    }
-</script>
-
+        function closeModal() {
+            document.getElementById('modal').style.display = "none";
+        }
+    </script>
 
 </body>
 </html>
