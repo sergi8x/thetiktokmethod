@@ -35,5 +35,52 @@
 </div>
 
 <div class="navigation-buttons">
-    <a href="3.html" class="nav-btn">Back</a>
-    <a href="5.html" class=""nav-btn">Next</a>
+            <button class="nav-btn" onclick="location.href='3.html'">Back</button>
+            <button class="nav-btn" onclick="location.href='5.html'">Next</button>
+        </div>
+    </main>
+
+    <footer>
+        <button class="footer-btn" onclick="openModal('privacy')">Privacy Policy</button>
+        <button class="footer-btn" onclick="openModal('terms')">Terms of Use</button>
+        <button class="footer-btn" onclick="openModal('contact')">Contact</button>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-text"></div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(type) {
+            let content = '';
+
+            if (type === 'privacy') {
+                content = `<h2>Privacy Policy</h2>
+                <p>We are committed to protecting your privacy. Your personal data will not be shared with third parties.</p>
+                <p>We only collect necessary information to improve our service.</p>`;
+            } 
+            else if (type === 'terms') {
+                content = `<h2>Terms of Use</h2>
+                <p>By using this website, you agree to follow our guidelines and not misuse the provided content.</p>
+                <p>Any unauthorized reproduction of the material is strictly prohibited.</p>`;
+            } 
+            else if (type === 'contact') {
+                content = `<h2>Contact</h2>
+                <p>If you have any questions, feel free to reach us at:</p>
+                <p><strong>moinnlyrics@gmail.com</strong></p>`;
+            }
+
+            document.getElementById('modal-text').innerHTML = content;
+            document.getElementById('modal').style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
